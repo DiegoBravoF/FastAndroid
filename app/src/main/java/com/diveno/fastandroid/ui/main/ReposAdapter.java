@@ -1,4 +1,4 @@
-package com.diveno.fastandroid.ui.base.main;
+package com.diveno.fastandroid.ui.main;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

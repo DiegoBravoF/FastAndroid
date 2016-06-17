@@ -2,7 +2,7 @@ package com.diveno.fastandroid.injection.component;
 
 import com.diveno.fastandroid.injection.PerActivity;
 import com.diveno.fastandroid.injection.module.ActivityModule;
-import com.diveno.fastandroid.ui.base.main.MainActivity;
+import com.diveno.fastandroid.ui.main.MainActivity;
 
 import dagger.Component;
 

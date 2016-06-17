@@ -1,5 +1,6 @@
 package com.diveno.fastandroid.data;
 
+import com.diveno.fastandroid.data.local.DatabaseHelper;
 import com.diveno.fastandroid.data.local.PrefHelper;
 import com.diveno.fastandroid.data.model.Repo;
 import com.diveno.fastandroid.data.remote.Services;
@@ -19,11 +20,13 @@ import rx.functions.Func1;
 public class DataManager {
     private final Services services;
     private final PrefHelper prefHelper;
+    private final DatabaseHelper databaseHelper;
 
     @Inject
-    public DataManager(Services services, PrefHelper prefHelper) {
+    public DataManager(Services services, PrefHelper prefHelper, DatabaseHelper databaseHelper) {
         this.services = services;
         this.prefHelper = prefHelper;
+        this.databaseHelper = databaseHelper;
     }
 
     public PrefHelper getPrefHelper() {
@@ -35,11 +38,11 @@ public class DataManager {
     }
 
     public Observable<Repo> syncRepos() {
-        return services.getRepos().concatMap(new Func1<List<Repo>, Observable<Repo>>() {
+        return services.getRepos()
+                .concatMap(new Func1<List<Repo>, Observable<Repo>>() {
             @Override
             public Observable<Repo> call(List<Repo> repos) {
-                //TODO insert in database repos
-                return null;
+                return databaseHelper.setRepos(repos);
             }
         });
     }

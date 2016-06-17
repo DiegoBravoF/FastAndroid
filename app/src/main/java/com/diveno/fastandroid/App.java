@@ -24,7 +24,7 @@ public class App extends Application {
         return (App) context.getApplicationContext();
     }
 
-    public ApplicationComponent getApplicationComponent() {
+    public ApplicationComponent getComponent() {
         if (applicationComponent == null) {
             applicationComponent = DaggerApplicationComponent.builder()
                     .applicationModule(new ApplicationModule(this))
@@ -33,7 +33,7 @@ public class App extends Application {
         return applicationComponent;
     }
 
-    public void setApplicationComponent(ApplicationComponent applicationComponent) {
+    public void setComponent(ApplicationComponent applicationComponent) {
         this.applicationComponent = applicationComponent;
     }
 }

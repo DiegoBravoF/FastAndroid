@@ -1,5 +1,7 @@
-package com.diveno.fastandroid.ui.base.main;
+package com.diveno.fastandroid.ui.main;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -28,6 +30,12 @@ public class MainActivity extends BaseActivity implements MainMvpView {
 
     @BindView(R.id.recycler_view)
     RecyclerView recyclerView;
+
+
+    public static Intent getStartIntent(Context context, boolean triggerDataSyncOnCreate) {
+        Intent intent = new Intent(context, MainActivity.class);
+        return intent;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

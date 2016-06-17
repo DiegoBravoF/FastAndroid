@@ -4,8 +4,8 @@ package com.diveno.fastandroid.ui.base;
  * Created by Diego on 15/06/2016.
  */
 public class BasePresenter<T extends MvpView> implements Presenter<T> {
-    public T view;
 
+    public T view;
 
     @Override
     public void attachView(T mvpView) {

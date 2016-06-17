@@ -1,4 +1,4 @@
-package com.diveno.fastandroid.ui.base.main;
+package com.diveno.fastandroid.ui.main;
 
 import com.diveno.fastandroid.data.DataManager;
 import com.diveno.fastandroid.data.model.Repo;

@@ -6,7 +6,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.os.IBinder;
-import android.support.annotation.Nullable;
 
 import com.diveno.fastandroid.App;
 import com.diveno.fastandroid.data.model.Repo;
@@ -39,7 +38,7 @@ public class SyncService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        App.get(this).getApplicationComponent().inject(this);
+        App.get(this).getComponent().inject(this);
     }
 
     @Override

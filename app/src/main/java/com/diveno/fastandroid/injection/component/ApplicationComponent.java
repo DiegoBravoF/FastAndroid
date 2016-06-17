@@ -18,13 +18,9 @@ import dagger.Component;
 @Singleton
 @Component(modules = ApplicationModule.class)
 public interface ApplicationComponent {
-
     void inject(SyncService syncService);
-
     @ApplicationContext
     Context context();
-
     DataManager dataManager();
-
     Application app();
 }
