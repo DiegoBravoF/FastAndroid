@@ -20,6 +20,9 @@ public interface Services {
     Observable<List<Repo>> getRepos();
 
     class Creator {
+        private Creator() {
+        }
+
         public static Services newService() {
             Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl(URL)

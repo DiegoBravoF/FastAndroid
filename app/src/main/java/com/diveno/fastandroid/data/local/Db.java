@@ -10,17 +10,19 @@ import com.diveno.fastandroid.data.model.Repo;
  */
 public class Db {
 
-    public Db() {
+    private Db() {
     }
 
     public abstract static class RepoTable {
         public static final String TABLE_NAME = "repo_table";
         public static final String COLUMN_NAME = "name";
-
         public static final String CREATE =
                 "CREATE TABLE " + TABLE_NAME + " (" +
                         COLUMN_NAME + " TEXT PRIMARY KEY, " +
                         " ); ";
+
+        private RepoTable() {
+        }
 
         public static ContentValues toContentValues(Repo repo) {
             ContentValues values = new ContentValues();

@@ -2,13 +2,13 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
 
 android {
-    compileSdkVersion 23
+    compileSdkVersion 25
     buildToolsVersion '23.0.3'
 
     defaultConfig {
         applicationId "com.diveno.fastandroid"
         minSdkVersion 15
-        targetSdkVersion 23
+        targetSdkVersion 25
         testInstrumentationRunner "${applicationId}.runner.RxAndroidJUnitRunner"
         versionCode 1
         versionName "1.0"
@@ -37,7 +37,7 @@ android {
 
 dependencies {
     final PLAY_SERVICES_VERSION = '8.4.0'
-    final SUPPORT_LIBRARY_VERSION = '23.4.0'
+    final SUPPORT_LIBRARY_VERSION = '25.1.0'
     final RETROFIT_VERSION = '2.0.0'
     final DAGGER_VERSION = '2.2'
     final BUTTERKNIFE_VERSION = '8.0.1'

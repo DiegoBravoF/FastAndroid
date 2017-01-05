@@ -33,8 +33,7 @@ public class MainActivity extends BaseActivity implements MainMvpView {
 
 
     public static Intent getStartIntent(Context context, boolean triggerDataSyncOnCreate) {
-        Intent intent = new Intent(context, MainActivity.class);
-        return intent;
+        return new Intent(context, MainActivity.class);
     }
 
     @Override
